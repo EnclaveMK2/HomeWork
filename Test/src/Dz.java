@@ -7,7 +7,6 @@ public class Dz {
     Float floti = 657.67f;
     Double doubli = 678.567;
 
-
     char some = 'k';
     short jo = 4;
     int b = 30;
