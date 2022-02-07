@@ -1,3 +1,5 @@
+package DZ_2;
+
 public class Dz_2 {
 
     public static void main(String[] args) {
