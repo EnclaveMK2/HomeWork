@@ -5,29 +5,39 @@ import java.util.Scanner;
 public class Arithmetics {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Please, enter first number for sum:");
-        int firstNumber = input.nextInt();
-        System.out.println("Please, enter second number for sum:");
-        int secondNumber = input.nextInt();
-        add(firstNumber, secondNumber);
+        System.out.println("Please, enter operation sign: +, -, *, /");
+        String command = input.next();
 
-        System.out.println("Please, enter first number for subtraction:");
-        firstNumber = input.nextInt();
-        System.out.println("Please, enter second number for subtraction:");
-        secondNumber = input.nextInt();
-        sub(firstNumber, secondNumber);
-
-        System.out.println("Please, enter first number for multiplication:");
-        firstNumber = input.nextInt();
-        System.out.println("Please, enter second number for multiplication:");
-        secondNumber = input.nextInt();
-        mul(firstNumber, secondNumber);
-
-        System.out.println("Please, enter first number for dividing:");
-        firstNumber = input.nextInt();
-        System.out.println("Please, enter second number for dividing:");
-        secondNumber = input.nextInt();
-        div(firstNumber, secondNumber);
+        switch (command) {
+            case "+":
+                System.out.println("Please, enter first number for sum:");
+                int firstNumber = input.nextInt();
+                System.out.println("Please, enter second number for sum:");
+                int secondNumber = input.nextInt();
+                add(firstNumber, secondNumber);
+                break;
+            case "-":
+                System.out.println("Please, enter first number for subtraction:");
+                firstNumber = input.nextInt();
+                System.out.println("Please, enter second number for subtraction:");
+                secondNumber = input.nextInt();
+                sub(firstNumber, secondNumber);
+                break;
+            case "*":
+                System.out.println("Please, enter first number for multiplication:");
+                firstNumber = input.nextInt();
+                System.out.println("Please, enter second number for multiplication:");
+                secondNumber = input.nextInt();
+                mul(firstNumber, secondNumber);
+                break;
+            case "/":
+                System.out.println("Please, enter first number for dividing:");
+                firstNumber = input.nextInt();
+                System.out.println("Please, enter second number for dividing:");
+                secondNumber = input.nextInt();
+                div(firstNumber, secondNumber);
+                break;
+        }
     }
 
     static void add(int firstNumber, int secondNumber) {
@@ -46,7 +56,11 @@ public class Arithmetics {
         if (secondNumber == 0) {
             System.out.println("Zero number is prohibited");
         } else {
-            System.out.println("Divide of these two numbers will be " + (firstNumber / secondNumber));
+            if (firstNumber % secondNumber == 0) {
+                System.out.println("Divide of these two numbers will be " + (firstNumber / secondNumber));
+            } else {
+                System.out.println("Divide of these two numbers will be " + ((float) firstNumber / secondNumber));
+            }
         }
     }
 }
