@@ -8,6 +8,10 @@ public class UserArray {
         array[2] = 3;
         array[3] = 8;
         array[4] = 1;
+
+        modifyPlusOne(array);
+
+        modifyZeroPosition(array, 5);
     }
 
     static void modifyPlusOne(int[] array){
@@ -15,5 +19,14 @@ public class UserArray {
         for (int i = 0; i < array.length; i++) {
             tempArray[i] = array[i];
         }
+    }
+
+    static void modifyZeroPosition(int[] array, int value){
+        int[] tempArray = new int[array.length+1];
+        tempArray[0] = value;
+        for (int i = 0; i < array.length; i++) {
+            tempArray[i+1] = array[i];
+        }
+        System.out.println("");
     }
 }
