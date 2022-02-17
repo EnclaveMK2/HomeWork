@@ -32,11 +32,16 @@ public class CustomerArray {
         System.out.println("Min Value is " + minValue);
         System.out.println("Max Value is " + maxValue);
         System.out.println("Sum is " + sum);
-        System.out.println("Middle number is " + sum/array.length);
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] % 2 != 0) {
-                System.out.print(array[i]);
+        if (sum % array.length == 0) {
+            System.out.println("Middle number is " + sum / array.length);
+        } else {
+            System.out.println("Middle number is " + (double) sum / array.length);
+        }
+
+        for (int j : array) {
+            if (j % 2 != 0) {
+                System.out.print(j);
             }
         }
     }

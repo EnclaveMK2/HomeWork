@@ -11,7 +11,8 @@ public class ReversedArray {
 
         myReverse(array);
 
-        subArray(array, 1, 20);
+        // check index 0
+        subArray(array, 0, 20);
     }
 
     static int[] myReverse(int[] array) {
@@ -27,7 +28,7 @@ public class ReversedArray {
     static int[] subArray(int[] array, int index, int count){
         int[] tempArray = new int[count];
         int tempCounter = 0;
-        for (; index <= count; index++) {
+        for (; index < count; index++) {
             if(index < array.length) {
                 tempArray[tempCounter] = array[index];
             } else {

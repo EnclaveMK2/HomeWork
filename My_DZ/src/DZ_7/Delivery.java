@@ -10,7 +10,7 @@ public class Delivery {
 
         System.out.println(calculateRoutsDoWhile(numberOfClients));
 
-        int tempRouts = 7;
+        int tempRouts = numberOfClients;
         for (int i = 2; i < numberOfClients; i++) {
             tempRouts = simple(tempRouts, i);
         }
@@ -25,7 +25,7 @@ public class Delivery {
     }
 
     static int calculateRoutsFor(int numberOfClients) {
-        int routs = 7;
+        int routs = numberOfClients;
         for (int i = 2; i < numberOfClients; i++) {
             routs *= i;
         }
@@ -33,7 +33,7 @@ public class Delivery {
     }
 
     static int calculateRoutsDoWhile(int numberOfClients) {
-        int numberOfRouts = 7;
+        int numberOfRouts = numberOfClients;
         do {
             numberOfClients = numberOfClients - 1;
             numberOfRouts *= numberOfClients;
