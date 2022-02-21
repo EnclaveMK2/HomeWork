@@ -13,12 +13,4 @@ public class Car extends Vehicle {
         year();
         coordinates();
     }
-
-
-
-
-
-
-
-
 }

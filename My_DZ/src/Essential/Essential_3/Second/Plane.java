@@ -25,6 +25,4 @@ public class Plane extends Vehicle {
     void height() {
         System.out.println("The height of this plane is :" + height + "km");
     }
-
-
 }
