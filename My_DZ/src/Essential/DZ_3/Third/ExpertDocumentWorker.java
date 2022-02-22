@@ -1,4 +1,4 @@
-package Essential.Essential_3.Third;
+package Essential.DZ_3.Third;
 
 public class ExpertDocumentWorker extends ProDocumentWorker {
 

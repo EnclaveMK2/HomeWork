@@ -1,4 +1,4 @@
-package Essential.Essential_4.Second;
+package Essential.DZ_4.Second;
 
 public interface Playable {
     void play();

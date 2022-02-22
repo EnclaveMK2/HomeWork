@@ -1,4 +1,4 @@
-package Essential.Essential_3.Second;
+package Essential.DZ_3.Second;
 
 public class Vehicle {
     int price;
