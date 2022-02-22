@@ -1,8 +1,8 @@
 package Essential.Essential_3.Third;
 
-public class ExpertDocumentWorker extends ProDocumentWorker{
+public class ExpertDocumentWorker extends ProDocumentWorker {
 
-    void saveDocument(){
+    void saveDocument() {
         System.out.println("Документ сохранен в новом формате");
     }
 }
