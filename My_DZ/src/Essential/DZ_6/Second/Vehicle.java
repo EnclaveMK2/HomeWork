@@ -11,19 +11,20 @@ public enum Vehicle {
         this.price = price;
         this.colour = colour;
     }
-
+//не совсем понял зачем этот метод если можно напрямую взять с обьекта
     String getColour() {
         return colour;
     }
 
     public String toString(Vehicle vehicle) {
-        return "Chosen vehicle is " + vehicle + ", its price is " + price + " and the colour is " + colour ;
+        return "Chosen vehicle is " + vehicle + ", its price is " + vehicle.price + " and the colour is " + vehicle.colour ;
     }
 }
 
 class Main{
     public static void main(String[] args) {
         Vehicle vehicle = Vehicle.STI;
+        // пришлось обьект закидывать в в тустринг ради имени
         System.out.println(vehicle.toString(vehicle));
     }
 }

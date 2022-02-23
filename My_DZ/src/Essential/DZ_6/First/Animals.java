@@ -16,6 +16,7 @@ public enum Animals {
 class Main {
     public static void main(String[] args) {
         Animals animal = Animals.DEER;
+        // пришлось обьект закидывать в в тустринг ради имени
         System.out.println(animal.toString(animal));
     }
 }
