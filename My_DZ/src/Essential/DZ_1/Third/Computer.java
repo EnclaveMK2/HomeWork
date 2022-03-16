@@ -1,4 +1,4 @@
-package Essential_1.Third;
+package Essential.DZ_1.Third;
 
 import javax.management.ObjectName;
 

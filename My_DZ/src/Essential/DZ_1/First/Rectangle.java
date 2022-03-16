@@ -1,4 +1,4 @@
-package Essential_1.First;
+package Essential.DZ_1.First;
 
 import java.util.Scanner;
 

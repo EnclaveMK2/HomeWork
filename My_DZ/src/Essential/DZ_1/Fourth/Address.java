@@ -1,4 +1,4 @@
-package Essential_1.Fourth;
+package Essential.DZ_1.Fourth;
 
 public class Address {
     String index, country, city, street, house, apartment;
