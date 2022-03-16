@@ -1,4 +1,4 @@
-package Essential_2.Third;
+package Essential.DZ_2.Third;
 
 public class Car {
     private int year;

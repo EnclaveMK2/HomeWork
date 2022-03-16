@@ -1,4 +1,4 @@
-package Essential_3.First;
+package Essential.DZ_3.First;
 
 public class ClassRoom {
 
