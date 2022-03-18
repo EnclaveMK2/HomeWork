@@ -10,7 +10,13 @@ public class Main {
         String measure = input.next().toLowerCase();
         System.out.println("Please enter distance that needs to be converted");
         double distanceToConvert  = input.nextDouble();
-        Distance distance = new Distance(measure, distanceToConvert);
-        distance.print();
+        Distance distance = new Distance(distanceToConvert);
+        double convertedDistance;
+        if (measure == "kmh") {
+           convertedDistance = Distance.Converter.kmToMil();
+        } else {
+            convertedDistance = Distance.Converter.milToKmh();
+        }
+        distance.print(convertedDistance);
     }
 }

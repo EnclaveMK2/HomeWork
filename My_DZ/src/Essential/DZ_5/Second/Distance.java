@@ -1,30 +1,24 @@
 package Essential.DZ_5.Second;
 
 public class Distance {
-    double distance;
+    static double distance;
 
-    Distance(String measure, double distanceToConvert) {
-        switch (measure) {
-            case "kmh":
-                distance = Converter.kmToMil(distanceToConvert);
-                break;
-            case "mil":
-                distance = Converter.milToKmh(distanceToConvert);
-        }
+    Distance(double distanceToConvert) {
+        distance = distanceToConvert;
     }
 
-    void print() {
-        System.out.println("The distance will be: " + distance);
+    void print(double convertedDistance) {
+        System.out.println("The distance will be: " + convertedDistance);
     }
 
     static class Converter {
 
-        static double kmToMil(double kmh) {
-            return kmh * 0.62;
+        static double kmToMil() {
+            return distance * 0.62;
         }
 
-        static double milToKmh(double mil) {
-            return mil / 0.62;
+        static double milToKmh() {
+            return distance / 0.62;
         }
     }
 }
