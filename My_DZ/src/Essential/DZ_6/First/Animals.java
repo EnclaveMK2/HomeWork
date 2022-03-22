@@ -7,16 +7,16 @@ public enum Animals {
     Animals(int age) {
         this.age = age;
     }
-//пришлось передавать обьект чтобы вытащить имя
-    public String toString(Animals animal) {
-        return "Chosen animal is " + animal + " and his age is " + age;
+
+    @Override
+    public String toString() {
+        return "Chosen animal is " + this.name() +  " and his age is " + age;
     }
 }
 
 class Main {
     public static void main(String[] args) {
         Animals animal = Animals.DEER;
-        // пришлось обьект закидывать в в тустринг ради имени
-        System.out.println(animal.toString(animal));
+        System.out.println(animal);
     }
 }
