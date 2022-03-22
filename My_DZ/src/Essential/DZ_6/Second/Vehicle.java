@@ -1,31 +1,27 @@
 package Essential.DZ_6.Second;
 
 public enum Vehicle {
-    WRX(35000, "blue"), STI(45000, "silver");
+    WRX(35000), STI(45000);
     final int price;
-    final String colour;
+    final String colour = "blue";
 
-    // пришлось еще добавить переменную стринг colour в конструктор иначе задача была бы невыполнимой
-
-    Vehicle(int price, String colour) {
+    Vehicle(int price) {
         this.price = price;
-        this.colour = colour;
-    }
-//не совсем понял зачем этот метод если можно напрямую взять с обьекта
-    String getColour() {
-        return colour;
     }
 
-    public String toString(Vehicle vehicle) {
-        return "Chosen vehicle is " + vehicle + ", its price is " + vehicle.price + " and the colour is " + vehicle.colour ;
+    String getColour() {
+        return this.colour;
+    }
+
+    public String toString() {
+        return "Chosen vehicle is " + this.name() + ", its price is " + this.price + " and the colour is " +  getColour();
     }
 }
 
 class Main{
     public static void main(String[] args) {
-        Vehicle vehicle = Vehicle.STI;
-        // пришлось обьект закидывать в в тустринг ради имени
-        System.out.println(vehicle.toString(vehicle));
+        Vehicle vehicle = Vehicle.WRX;
+        System.out.println(vehicle);
     }
 }
 
