@@ -6,6 +6,7 @@ public class Main {
         Device device2 = new Device();
         Monitor monitor = new Monitor();
         EthernetAdapter ethernetAdapter = new EthernetAdapter();
+
         System.out.println(device);
         System.out.println(monitor);
         System.out.println(ethernetAdapter);
@@ -15,13 +16,8 @@ public class Main {
         System.out.println(device.hashCode() == device2.hashCode());
         System.out.println(device.hashCode() == monitor.hashCode());
 
-
         device.hashCode();
         monitor.hashCode();
         ethernetAdapter.hashCode();
-
     }
-
-
-
 }

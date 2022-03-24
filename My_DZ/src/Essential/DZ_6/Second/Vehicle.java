@@ -1,7 +1,9 @@
 package Essential.DZ_6.Second;
 
 public enum Vehicle {
-    WRX(35000), STI(45000);
+    WRX(35000),
+    STI(45000);
+
     final int price;
     final String colour = "blue";
 
@@ -14,7 +16,9 @@ public enum Vehicle {
     }
 
     public String toString() {
-        return "Chosen vehicle is " + this.name() + ", its price is " + this.price + " and the colour is " +  getColour();
+        return "Chosen vehicle is " + this.name()
+                + ", its price is " + this.price
+                + " and the colour is " +  getColour();
     }
 }
 
