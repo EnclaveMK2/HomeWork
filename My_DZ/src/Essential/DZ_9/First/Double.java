@@ -1,12 +1,13 @@
 package Essential.DZ_9.First;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Double {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         List<String> list = new ArrayList<>();
 
         System.out.println("Please, enter 5 word");
@@ -19,6 +20,7 @@ public class Double {
                 e.printStackTrace();
             }
         }
+        reader.close();
 
         for (int i = 0; i < list.size(); i++) {
             list.set(i, doubleValue(list.get(i)));
@@ -37,5 +39,6 @@ public class Double {
             }
         }
         return doubledWord;
+
     }
 }
