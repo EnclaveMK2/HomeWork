@@ -12,6 +12,9 @@ public class Main {
             list.add((int) (Math.random() * 10));
         }
         System.out.println(list);
+        list = list.stream().map(number -> Math.toIntExact(Math.round(Math.pow(number, 2)))).collect(Collectors.toList());
+        Integer some1 = list.stream().reduce(0,(some, element) -> some + element);
+        System.out.println(some1);
 
 //        list.stream().map(number -> String.valueOf(number.toString()))
 //                .collect(Collectors.toList());
