@@ -21,8 +21,7 @@ public class Main {
 
         Arithmetic div = (Integer a, Integer b) -> (a / b);
         System.out.println("Divide = " + div.operation(first, second)); /*проблемі с делением меньшего на большее*/
-
-
+        
         List<Integer> listInt = new ArrayList<>();
         listInt.add(5);
         listInt.add(4);
