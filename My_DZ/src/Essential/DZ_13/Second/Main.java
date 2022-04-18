@@ -37,5 +37,6 @@ public class Main {
         if (!flag) {
             throw new Exception("The store is incorrect");
         }
+        reader.close();
     }
 }

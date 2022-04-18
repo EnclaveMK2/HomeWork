@@ -1,10 +1,10 @@
 package Essential.DZ_13.First;
 
-public class Worker implements Comparable {
+public class Worker implements Comparable<Worker> {
     String surname;
     String initials;
     String profession;
-    String startYear;
+    int startYear;
 
     public String getSurname() {
         return surname;
@@ -21,7 +21,23 @@ public class Worker implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(Worker o) {
+//        if (this.startYear == o.startYear) {
+//            return 0;
+//        } else if (this.startYear > o.startYear) {
+//            return 1;
+//        } else {
+//            return -1;
+//        }
+
+//        return this.startYear - o.startYear;
+
+//        return this.profession.compareTo(o.profession);
+
+        int result = this.surname.compareTo(o.surname);
+        if (result == 0) {
+            result = this.startYear - o.startYear;
+        }
+        return result;
     }
 }
